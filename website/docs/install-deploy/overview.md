@@ -109,7 +109,7 @@ We have listed them in the table below the figure.
         <tr>
             <td>Lakehouse Storage (optional)</td>
             <td>
-               Fluss's DataLake Tiering Service will continuously compact Fluss's Arrow files into Parquet/ORC files in open lake format.
+               Fluss's DataLake Compaction Service will continuously compact Fluss's Arrow files into Parquet/ORC files in open lake format.
                The data in Lakehouse storage can be read both by Fluss's client in a Union Read manner and accessed directly
                by query engines such as Flink, Spark, StarRocks, Trino.
             </td>

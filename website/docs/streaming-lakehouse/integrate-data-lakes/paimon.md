@@ -13,7 +13,7 @@ When a table with option `'table.datalake.enabled' = 'true'` is created or alter
 The schema of the Paimon table is as same as the schema of the Fluss table, except for there are two extra columns `__offset` and `__timestamp` appended to the last.
 These two columns are used to help Fluss client to consume the data in Paimon in streaming way like seek by offset/timestamp, etc.
 
-Then datalake tiering service compacts the data from Fluss to Paimon continuously. For primary key table, it will also generate change log in Paimon format which
+Then datalake compaction service compacts the data from Fluss to Paimon continuously. For primary key table, it will also generate change log in Paimon format which
 enables you streaming consume it in Paimon way.
 
 ## Read tables

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * Extends from {@link CliFrontend} but override method {@link #executeProgram(Configuration,
  * PackagedProgram)} to respect the configuration key {@link PipelineOptions#JARS} so that the
- * additional jar needed to run lakehouse tiering service can be submitted to fluss cluster as well.
+ * additional jar needed to run lakehouse compaction service can be submitted to fluss cluster as well.
  */
 public class FlussCliFronted extends CliFrontend {
 

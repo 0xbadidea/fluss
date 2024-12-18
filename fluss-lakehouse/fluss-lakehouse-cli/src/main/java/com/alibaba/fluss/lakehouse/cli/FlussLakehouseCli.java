@@ -40,7 +40,7 @@ import static org.apache.flink.streaming.api.environment.ExecutionCheckpointingO
 public class FlussLakehouseCli {
 
     private static final Duration DEFAULT_CHECKPOINT_INTERVAL = Duration.ofMinutes(3);
-    private static final String DEFAULT_PIPELINE_NAME = "fluss-paimon-tiering-service";
+    private static final String DEFAULT_PIPELINE_NAME = "fluss-paimon-compaction-service";
 
     private static final int INITIAL_RET_CODE = 31;
     private static final String FLINK_CONFIG_PREFIX = "flink.";

@@ -51,7 +51,7 @@ if [ ! -z "$fluss_plugin_jars" ]; then
     addition_jars="${fluss_plugin_jars}"
 fi
 
-echo "Starting lakehouse tiering service"
+echo "Starting Lakehouse Compaction Service"
 
 LAKEHOUSE_SERVICE_CLASS_TO_RUN=com.alibaba.fluss.lakehouse.cli.FlussLakehouseCli
 LAKEHOUSE_SERVICE_CLASSPATH=`findLakehouseCliJar`

@@ -888,7 +888,7 @@ public class ConfigOptions {
                     .defaultValue(false)
                     .withDescription(
                             "Whether enable lakehouse storage for the table. Disabled by default. "
-                                    + "When this option is set to ture and the datalake tiering service is up,"
+                                    + "When this option is set to true and the datalake compaction service is up,"
                                     + " the table will be tiered and compacted into datalake format stored on lakehouse storage.");
 
     // ------------------------------------------------------------------------

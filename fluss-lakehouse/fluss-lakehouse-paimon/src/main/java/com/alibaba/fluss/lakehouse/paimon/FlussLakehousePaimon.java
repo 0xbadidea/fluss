@@ -94,7 +94,7 @@ public class FlussLakehousePaimon {
                 new PaimonDataBaseSyncSinkBuilder(paimonConfig, flussConfig).withInput(input);
         paimonDataBaseSyncSinkBuilder.build();
 
-        System.out.println("Starting data tiering service to Paimon.....");
+        System.out.println("Starting the compaction service to offload as Fluss data as Paimon tables.....");
         execEnv.executeAsync();
     }
 

@@ -333,17 +333,17 @@ SELECT * FROM fluss_customer WHERE `cust_key` = 1;
 ```
 
 ## Integrate with Paimon
-### Start the Lakehouse Tiering Service
-To integrate with [Apache Paimon](https://paimon.apache.org/), you need to start the `Lakehouse Tiering Service`. 
+### Start the Lakehouse Compaction Service
+To integrate with [Apache Paimon](https://paimon.apache.org/), you need to start the `Lakehouse Compaction Service`. 
 Open a new terminal, navigate to the `fluss-quickstart-flink` directory, and execute the following command within this directory to start the service:
 ```shell
 docker compose exec coordinator-server ./bin/lakehouse.sh -D flink.rest.address=jobmanager -D flink.rest.port=8081 -D flink.execution.checkpointing.interval=30s
 ```
-You should see a Flink Job named `fluss-paimon-tiering-service` running in the [Flink Web UI](http://localhost:8083/).
+You should see a Flink Job named `fluss-paimon-compaction-service` running in the [Flink Web UI](http://localhost:8083/).
 
 ### Streaming into Fluss datalake-enabled tables
 
-By default, tables are created with data lake integration disabled, meaning the Lakehouse Tiering Service will not tier the table's data to the data lake.
+By default, tables are created with data lake integration disabled, meaning the Lakehouse Compaction Service will not tier the table's data to the data lake.
 
 To enable lakehouse functionality as a tiered storage solution for a table, you must create the table with the configuration option `table.datalake.enabled = true`. 
 Return to the `SQL client` and execute the following SQL statement to create a table with data lake integration enabled:
